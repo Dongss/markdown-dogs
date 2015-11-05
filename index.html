@@ -4,19 +4,21 @@
         <title>Markdown dogs</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="./style.css" />
+        <link href="http://cdn.bootcss.com/highlight.js/8.9.1/styles/github.min.css" rel="stylesheet">
     <head>
 
     <body>
         <a href="https://github.com/Dongss/markdown-dogs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
         <div id="editor">
-            <textarea v-model="input" debounce="300"></textarea>
+            <textarea v-model="input" debounce="100"></textarea>
             <div v-html="input | marked"></div>
         </div>
     </body>
 
     <script src="https://rawgit.com/vuejs/vue/1.0.4/dist/vue.min.js"></script>
     <script src="https://rawgit.com/chjj/marked/master/lib/marked.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/8.9.1/highlight.min.js"></script>
     <script src="./index.js"></script>
 
 </html>

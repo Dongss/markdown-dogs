@@ -7,3 +7,11 @@ var md = new Vue({
     marked: marked
   }
 });
+
+md.$watch('input', function(oldVal, newVal) {
+    var elements = document.getElementsByTagName("code");
+    
+    for (var i= 0; i < elements.length; i++) {
+        hljs.highlightBlock(elements[i]);
+    }
+});
