@@ -1,8 +1,19 @@
+#menu {
+position: fixed;
+background-color: #093296;
+color: white;
+width: 100%;
+padding: 3px;
+min-width: 600px;
+}
 html, body, #editor {
 margin: 0;
 height: 100%;
 font-family: 'Helvetica Neue', Arial, sans-serif;
 color: #333;
+}
+#editor {
+padding-top: 30px;
 }
 textarea {
 display: inline-block;
@@ -28,6 +39,7 @@ code {
 color: #f66;
 }
 .preview {
+overflow-y: auto;
 display: inline-block;
 height: 100%;
 vertical-align: top;
@@ -35,13 +47,14 @@ vertical-align: top;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 padding: 0 20px;
+word-wrap: break-word;
 }
 .edit-preview {
-width: 49%;
+width: 50.5%;
 }
 .show-preview {
 width: 100%;
 }
 .change-mode-button {
-  float: right;
+float: right;
 }
