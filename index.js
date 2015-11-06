@@ -1,7 +1,8 @@
 var md = new Vue({
     el: '#editor',
     data: {
-        input: '# Hello [Vue.js](https://github.com/vuejs/vue)'
+        input: '# Hello [Vue.js](https://github.com/vuejs/vue)',
+        editMode: true
     },
     filters: {
         marked: marked
@@ -16,8 +17,8 @@ md.$watch('input', function(oldVal, newVal) {
     }
 });
 
-var dl = new Vue({
-    el: '#download',
+var menu = new Vue({
+    el: '#menu',
     data: {
         selected: '.md',
         options: [
@@ -29,6 +30,14 @@ var dl = new Vue({
         onDownload: function(type) {
             var fileName = 'download' + type;
             download(md.input, fileName, "text/plain");
+        },
+        onChangeMode: function(editMode) {
+            md.editMode = !md.editMode
+        }
+    },
+    computed: {
+        mode: function() {
+            return md.editMode ? 'Preview' : 'Edit markdown'
         }
     }
 });
