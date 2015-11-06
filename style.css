@@ -6,6 +6,9 @@ width: 100%;
 padding: 3px;
 min-width: 600px;
 }
+body {
+    overflow: hidden;
+}
 html, body, #editor {
 margin: 0;
 height: 100%;
